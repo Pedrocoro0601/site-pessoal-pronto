@@ -188,17 +188,7 @@ footer {
 /* fim do footer*/
 
 
-@media screen and (max-width: 400px) {
-    main {
-        max-width: 1200px;
-        margin: 0 auto;
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 1fr;
-        /*dividir no meio*/
-        border-radius: 5px;
-    }
-}
+
 
 @media screen and (max-width: 800px) {
     main {
@@ -206,8 +196,7 @@ footer {
         margin: 0 auto;
         margin-top: 20px;
         display: grid;
-        grid-template-columns: 1fr;
-        /*dividir no meio*/
+        grid-template-columns: 1fr; /*dividir no meio*/
         border-radius: 5px;
     }
 
@@ -218,35 +207,34 @@ footer {
         height: 100%;
     }
 
+}
+
+@media screen and (max-width: 390px) {
+    navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        height: 100%;
+        transform: scale(0.60);        
+    }
+
     .Logomarca-pedro {
-        max-width: 100%;
-        
+        width: 700px;
     
     }
 }
 
 @media screen and (max-width: 400px) {
-    main {
-        max-width: 1200px;
-        margin: 0 auto;
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 1fr;
-        /*dividir no meio*/
-        border-radius: 5px;
-    }
-    
     navbar ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 40px;
-        height: 40;
-    }
-    
-    .Logomarca-pedro {
-        max-width: 800px;
-        
-    
+        height: 100%;
+        transform: scale(0.60);        
     }
 
+    .Logomarca-pedro {
+        width: 700px;
+    
+    }
 }
