@@ -1,12 +1,3 @@
-/*var mensagem = "Bem vindo ao site do Dr. Pedro Henrique";
-
-alert(mensagem);
-*/
-
-
-
-
-
 var main = document.getElementById("main");
 var botao = document.getElementById("botao")
 var body = document.getElementById("body")
@@ -34,8 +25,13 @@ var saibamais2 = document.getElementById("saibamais2")
 var saibamais3 = document.getElementById("saibamais3")
 var saibamais0 = document.getElementById("saibamais0")
 
+var audio = new Audio('musica/lobo2.mp3');
+
+
+
 botao.addEventListener("click", ()=> {
     if (clicked == true) {
+        audio.play();
         botao.innerText = "Volte ao normal"
         main.style.border = "24px solid"
         main.style.borderImage = "url(imagens/skull-border.svg)"
@@ -73,13 +69,14 @@ botao.addEventListener("click", ()=> {
         saibamais3.style.color = "black"
         saibamais0.style.backgroundColor = "red"
         saibamais0.style.color = "black"
-
+        
         clicks++  
       
         clicked = false
     }
     else 
     {
+    audio.pause();
     main.style.border = "0px solid"
     botao.innerText = "Não clique aqui"
     body.style.backgroundColor = "white"
@@ -117,12 +114,8 @@ botao.addEventListener("click", ()=> {
     clicked = true
     
     }
-
      footer.innerText = "Falei para nao clicar e você ainda clicou" + " " + clicks + "x"
-
-
-    console.log(clicks);
-
+     console.log(clicks);
 });
 
 
